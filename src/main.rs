@@ -16,8 +16,6 @@ fn main() {
     
         
 
-//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
-
 fn calculator() {
     println!("You chose the calculator");
     let mut line = String::new();
