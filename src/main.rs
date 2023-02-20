@@ -22,21 +22,19 @@ fn calculator() {
     let mut calc_a = String::new();
     let mut calc_b = String::new();
     
-    println!("1:multiplikation, 2;Subraktion, 3:Divison, 4:Addition");
+    println!("1:Addition, 2;Subraktion, 3:Divison, 4:Multiplication");
     std::io::stdin().read_line(&mut line).unwrap();
     let x = line.trim().parse().expect("input not int");
     
     
      if 1==x {
-        println!("You chose Multiplication");
+        println!("You chose Addition");
         println!("Enter two numbers: ");
-        let a:i32 = calc_a.trim().parse().expect("not working");
         std::io::stdin().read_line(&mut calc_a).unwrap();
-      
-        println!("+");
-        let b:i32 = calc_b.trim().parse().expect("not working");
+        let a:f32 = calc_a.trim().parse().expect("something went wrong");
+    
         std::io::stdin().read_line(&mut calc_b).unwrap();
-     
+        let b:f32 = calc_b.trim().parse().expect("something went wrong");
         
         println!("{}",b+a);
     
@@ -66,13 +64,13 @@ fn calculator() {
     
         
     } else if 4==x {
-        println!("You chose Addition");
+        println!("You chose Multiplication");
         println!("Enter two numbers: ");
-        std::io::stdin().read_line(& mut calc_a).unwrap();
-        let a:i32 = calc_a.trim().parse().expect("Not an int");
+        std::io::stdin().read_line(&mut calc_a).unwrap();
+        let a:f32 = calc_a.trim().parse().expect("something went wrong");
     
-        std::io::stdin().read_line(& mut calc_b).unwrap();
-        let b:i32 = calc_b.trim().parse().expect("something went wrong");
+        std::io::stdin().read_line(&mut calc_b).unwrap();
+        let b:f32 = calc_b.trim().parse().expect("something went wrong");
     
         println!("{}", a*b);
     } else {
